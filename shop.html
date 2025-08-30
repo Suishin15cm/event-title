@@ -49,13 +49,14 @@
     .description{
       text-align: left;
       font-size: 0.85rem;
-      padding-bottom: 4px;
     }
 
     #goods-cards {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      padding-top: 4px;
+      padding-bottom: 4px;
     }
 
     .card-item {
@@ -199,7 +200,7 @@
     <h3>購入商品選択ページ</h3>
     <p class="description">
       購入したい商品の個数を選択し、最下部の「確認へ」ボタンを押してください。<br>
-      ※物販購入時に選択した商品が売り切れの場合は、売り切れ商品のみキャンセルとさせていただきます。
+      ※物販購入時に選択した商品が売り切れの場合は、該当商品のみキャンセルとさせていただきます。
     </p>
     <div id="goods-cards"></div>
     <div id="select-summary"></div>
@@ -209,8 +210,8 @@
   <section id="pageConfirm" style="display:none">
     <h3>購入商品確認ページ</h3>
     <p class="description">
-      購入したい商品と金額、応援カード受け取り枚数をご確認の上、「完了（QR表示）」ボタンを押してください。<br>
-      内容を修正したい場合は「戻る」ボタンを押してください。
+      購入商品と金額、応援カード受け取り枚数をご確認の上、「完了（QR表示）」ボタンを押してください。<br>
+      修正したい場合は「戻る」ボタンを押してください。
     </p>
     <div id="confirm-list"></div>
     <div id="confirm-summary"></div>
@@ -222,7 +223,8 @@
     <h3>購入用QRページ</h3>
     <p class="description">
       物販購入の際、こちらのQRをご用意ください。<br>
-      再読み込み等でリセットされてしまうことがあるため、スクリーンショット等で保存することを推奨します。
+      再読み込み等でリセットされてしまうことがあるため、スクリーンショット等で保存することを推奨します。<br>
+      修正したい場合は「戻る」ボタンを押してください。
     </p>
     <div id="qrcode"></div>
     <div id="qr-list"></div>
@@ -365,7 +367,7 @@
             <tr>
               <th>缶バッジ購入点数</th>
               <td>${countForBonus}点</td>
-              <th>追加応援カード枚数</th>
+              <th>缶バッジ付属応援カード枚数</th>
               <td>${setBonus}枚</td>
             </tr>
           </tfoot>
@@ -429,7 +431,7 @@
             <tr>
               <th>缶バッジ購入点数</th>
               <td>${countForBonus}点</td>
-              <th>追加応援カード枚数</th>
+              <th>缶バッジ付属応援カード枚数</th>
               <td>${setBonus}枚</td>
             </tr>
           </tfoot>
