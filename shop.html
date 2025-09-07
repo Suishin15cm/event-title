@@ -203,8 +203,8 @@
   <section id="pageSelect">
     <h3>購入商品選択ページ</h3>
     <p class="description">
-      購入したい商品の個数を選択し、最下部の「確認へ」ボタンを押してください。<br>
-      キャラクター缶バッジは、5点購入ごとに、応援カードが1枚付属します。（種類は不問）<br>
+      ・購入したい商品の個数を選択し、最下部の「確認へ」ボタンを押してください。<br>
+      ・キャラクター缶バッジは、5点購入ごとに、応援カードが1枚付属します。（種類は不問）<br><br>
       ※物販購入時に選択した商品が売り切れの場合は、該当商品のみキャンセルとさせていただきます。
     </p>
     <div id="goods-cards"></div>
@@ -396,7 +396,7 @@
 
       // 購入リストを取得（JSONに埋め込む形式に変換）
       const purchaseItems = selectItems.filter(g => g.qty > 0);
-      const purchaseItemsForQR = purchaseItems.map(g => ({ id: g.id, qty: g.qty }));
+      const purchaseItemsForQR = purchaseItems.map(g => [g.id, g.qty]);
 
       // QRコードの生成
       const qrDiv = document.getElementById("qrcode");
