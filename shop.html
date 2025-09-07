@@ -194,12 +194,17 @@
 </head>
 <body>
 
-  <h2 id="event-title">画面共通タイトルはここ</h2>
+  <!--変更箇所-->
+  <h2 id="event-title">
+    第3回 俺たちは、芝居がしたい！<br>
+    物販購入はこちらから
+  </h2>
 
   <section id="pageSelect">
     <h3>購入商品選択ページ</h3>
     <p class="description">
       購入したい商品の個数を選択し、最下部の「確認へ」ボタンを押してください。<br>
+      キャラクター缶バッジは、5点購入ごとに、応援カードが1枚付属します。（種類は不問）<br>
       ※物販購入時に選択した商品が売り切れの場合は、該当商品のみキャンセルとさせていただきます。
     </p>
     <div id="goods-cards"></div>
@@ -234,29 +239,25 @@
 
   <script>
 
-    // 商品マスタ
+    // 商品マスタ（変更箇所）
     const GOODS_MASTER = [
-      { id: 1,  name: "あいうえおかきくけこさしすせそたちつてと", price:0, bonus:3 },
-      { id: 2,  name: "あいうえおかきくけこさしすせそ", price:2500, bonus:2 },
-      { id: 3,  name: "あいうえおかきくけこ", price:1500,  bonus:1 },
-      { id: 4,  name: "あいうえお", price:1000,  bonus:1 },
-      { id: 5,  name: "缶バッジA", price:400,  bonus:0 },
-      { id: 6,  name: "缶バッジB", price:400,  bonus:0 },
-      { id: 7,  name: "缶バッジC", price:400,  bonus:0 },
-      { id: 8,  name: "缶バッジD", price:400,  bonus:0 },
-      { id: 9,  name: "缶バッジE", price:400,  bonus:0 },
-      { id:10, name: "商品10", price:400,  bonus:0 },
-      { id:11, name: "商品11", price:800, bonus:1 },
-      { id:12, name: "商品12", price:2200, bonus:3 },
-      { id:13, name: "商品13", price:2200, bonus:3 },
-      { id:14, name: "商品14", price:3500, bonus:5 },
-      { id:15, name: "商品15", price:300,  bonus:0 },
-      { id:16, name: "商品16", price:400,  bonus:0 }
+      { id: 1,  name: "公演音声DLカード", price:2500, bonus:2 },
+      { id: 2,  name: "A5サイズ公演台本「帰帆」", price:1500, bonus:1 },
+      { id: 3,  name: "キャラクター缶バッジ「アトラ」", price:400,  bonus:0 },
+      { id: 4,  name: "キャラクター缶バッジ「ガルナ」", price:400,  bonus:0 },
+      { id: 5,  name: "キャラクター缶バッジ「ニーセル」", price:400,  bonus:0 },
+      { id: 6,  name: "キャラクター缶バッジ「ロンディア」", price:400,  bonus:0 },
+      { id: 7,  name: "キャラクター缶バッジ「キアリス」", price:400,  bonus:0 },
+      { id: 8,  name: "ランダムブロマイド", price:1000,  bonus:1 },
+      { id: 9,  name: "ランダムポストカード", price:1000,  bonus:1 },
+      { id:10, name: "水深ステッカー", price:300,  bonus:0 },
+      { id:11, name: "水深缶バッジ", price:400, bonus:0 },
+      { id:12, name: "応援カード単品", price:800, bonus:1 }
     ];
 
-    // 購入点数ごとに応援カードを付与する商品
+    // 購入点数ごとに応援カードを付与する商品（変更箇所）
     const BONUS_ITEM_IDS = [
-      5,6,7,8,9
+      3,4,5,6,7
     ]
 
     // 共通変数
